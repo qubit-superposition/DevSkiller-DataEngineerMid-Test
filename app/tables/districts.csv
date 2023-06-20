@@ -1,0 +1,10 @@
+district_id,name,city_id
+1,Stare Miasto,1
+2,Podgórze,1
+3,Nowa Huta,1
+4,Śródmieście,2
+5,Mokotów,2
+6,Wola,2
+7,Manhattan,3
+8,Queens,3
+9,Brooklyn,3

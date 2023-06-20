@@ -1,0 +1,16 @@
+address_id,district_id,street
+1,1,Grodzka
+2,1,Starowiślna
+3,1,Podzamcze
+4,2,Kalwaryjska
+5,2,Bolesława Limanowskiego
+6,3,al. Jana Pawła II
+7,4,al. Jana Pawła II
+8,4,al. Jerozolimskie
+9,5,Puławska
+10,5,Modra
+11,7,5th Ave
+12,7,6th Ave
+13,8,Metropolitan Ave
+14,8,Grand Ave
+15,9,Linden Blvd
