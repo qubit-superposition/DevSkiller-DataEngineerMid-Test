@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="Eduardos-MacBook-Pro.local" name="pytest" skipped="0" tests="1" time="0.754" timestamp="2023-06-22T00:47:39.005860"><testcase classname="test.test_load_tables.TestLoadTables" file="test/test_load_tables.py" line="30" name="test_tables_have_correct_indices" time="0.014"><failure message="AssertionError: None != 'birthdate_id'">self = &lt;test.test_load_tables.TestLoadTables testMethod=test_tables_have_correct_indices&gt;
+
+    def test_tables_have_correct_indices(self):
+        for table, info in TABLES_SCHEMA.items():
+            df = self.assertImplemented(lambda: load_single_table(table))
+&gt;           self.assertEqual(df.index.name, info["index"])
+
+test_load_tables.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../../Library/Application Support/JetBrains/Toolbox/apps/PyCharm-P/ch-0/231.8770.66/PyCharm.app/Contents/plugins/python/helpers/pycharm/teamcity/diff_tools.py:33: in _patched_equals
+    old(self, first, second, msg)
+E   AssertionError: None != 'birthdate_id'</failure></testcase></testsuite></testsuites>
