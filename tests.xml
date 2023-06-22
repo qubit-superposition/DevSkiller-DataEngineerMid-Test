@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="17" skipped="0" tests="23" time="3.495" timestamp="2023-02-04T01:35:33.914273" hostname="task-pycharm-c-162449-16-56ff5c855f-kd69l"><testcase classname="test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable" name="test_meal_type_is_properly_mapped" file="test/test_create_tables.py" line="69" time="0.002"><failure message="AssertionError: This should be implemented">self = &lt;test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable testMethod=test_meal_type_is_properly_mapped&gt;
+fn = &lt;function TestCreateOrdersByMealTypeAgeCuisineTable.setUp.&lt;locals&gt;.&lt;lambda&gt; at 0x7f6e1cedf700&gt;
+
+    def assertImplemented(self, fn):
+        try:
+&gt;           return fn()
+
+test/common.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+&gt;   self.table = self.assertImplemented(lambda: get_table())
+
+test/test_create_tables.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_table() -&gt; pd.DataFrame:
+&gt;       return create_orders_by_meal_type_age_cuisine_table(get_reduced_db())
+
+test/common.py:142: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_reduced_db() -&gt; ReducedDatabase:
+&gt;       return reduce_dims(MultiDimDatabase(*load_all_tables()))
+
+test/common.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+
+    def load_all_tables(tables_dir_path: Path = TABLES_DIR_PATH) -&gt; List[pd.DataFrame]:
+&gt;       res = load_tables(tables_dir_path, list(TABLES_SCHEMA.keys()))
+
+test/common.py:133: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+tables = ['addresses', 'birthdates', 'cities', 'countries', 'cuisines', 'districts', ...]
+
+    def load_tables(tables_dir_path: Path, tables: List[str]) -&gt; List[pd.DataFrame]:
+&gt;       raise NotImplementedError()
+E       NotImplementedError
+
+app/dims_and_facts.py:52: NotImplementedError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable testMethod=test_meal_type_is_properly_mapped&gt;
+
+    def setUp(self) -&gt; None:
+&gt;       self.table = self.assertImplemented(lambda: get_table())
+
+test/test_create_tables.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test/common.py:150: in assertImplemented
+    self.fail("This should be implemented")
+E   AssertionError: This should be implemented</failure></testcase><testcase classname="test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable" name="test_table_should_be_of_proper_length" file="test/test_create_tables.py" line="43" time="0.012"><failure message="AssertionError: This should be implemented">self = &lt;test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable testMethod=test_table_should_be_of_proper_length&gt;
+fn = &lt;function TestCreateOrdersByMealTypeAgeCuisineTable.setUp.&lt;locals&gt;.&lt;lambda&gt; at 0x7f6e1d2618b0&gt;
+
+    def assertImplemented(self, fn):
+        try:
+&gt;           return fn()
+
+test/common.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+&gt;   self.table = self.assertImplemented(lambda: get_table())
+
+test/test_create_tables.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_table() -&gt; pd.DataFrame:
+&gt;       return create_orders_by_meal_type_age_cuisine_table(get_reduced_db())
+
+test/common.py:142: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_reduced_db() -&gt; ReducedDatabase:
+&gt;       return reduce_dims(MultiDimDatabase(*load_all_tables()))
+
+test/common.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+
+    def load_all_tables(tables_dir_path: Path = TABLES_DIR_PATH) -&gt; List[pd.DataFrame]:
+&gt;       res = load_tables(tables_dir_path, list(TABLES_SCHEMA.keys()))
+
+test/common.py:133: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+tables = ['addresses', 'birthdates', 'cities', 'countries', 'cuisines', 'districts', ...]
+
+    def load_tables(tables_dir_path: Path, tables: List[str]) -&gt; List[pd.DataFrame]:
+&gt;       raise NotImplementedError()
+E       NotImplementedError
+
+app/dims_and_facts.py:52: NotImplementedError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable testMethod=test_table_should_be_of_proper_length&gt;
+
+    def setUp(self) -&gt; None:
+&gt;       self.table = self.assertImplemented(lambda: get_table())
+
+test/test_create_tables.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test/common.py:150: in assertImplemented
+    self.fail("This should be implemented")
+E   AssertionError: This should be implemented</failure></testcase><testcase classname="test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable" name="test_table_should_be_sorted_by_order_id" file="test/test_create_tables.py" line="63" time="0.002"><failure message="AssertionError: This should be implemented">self = &lt;test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable testMethod=test_table_should_be_sorted_by_order_id&gt;
+fn = &lt;function TestCreateOrdersByMealTypeAgeCuisineTable.setUp.&lt;locals&gt;.&lt;lambda&gt; at 0x7f6e1c330a60&gt;
+
+    def assertImplemented(self, fn):
+        try:
+&gt;           return fn()
+
+test/common.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+&gt;   self.table = self.assertImplemented(lambda: get_table())
+
+test/test_create_tables.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_table() -&gt; pd.DataFrame:
+&gt;       return create_orders_by_meal_type_age_cuisine_table(get_reduced_db())
+
+test/common.py:142: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_reduced_db() -&gt; ReducedDatabase:
+&gt;       return reduce_dims(MultiDimDatabase(*load_all_tables()))
+
+test/common.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+
+    def load_all_tables(tables_dir_path: Path = TABLES_DIR_PATH) -&gt; List[pd.DataFrame]:
+&gt;       res = load_tables(tables_dir_path, list(TABLES_SCHEMA.keys()))
+
+test/common.py:133: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+tables = ['addresses', 'birthdates', 'cities', 'countries', 'cuisines', 'districts', ...]
+
+    def load_tables(tables_dir_path: Path, tables: List[str]) -&gt; List[pd.DataFrame]:
+&gt;       raise NotImplementedError()
+E       NotImplementedError
+
+app/dims_and_facts.py:52: NotImplementedError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable testMethod=test_table_should_be_sorted_by_order_id&gt;
+
+    def setUp(self) -&gt; None:
+&gt;       self.table = self.assertImplemented(lambda: get_table())
+
+test/test_create_tables.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test/common.py:150: in assertImplemented
+    self.fail("This should be implemented")
+E   AssertionError: This should be implemented</failure></testcase><testcase classname="test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable" name="test_table_should_have_correct_column_names" file="test/test_create_tables.py" line="51" time="0.003"><failure message="AssertionError: This should be implemented">self = &lt;test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable testMethod=test_table_should_have_correct_column_names&gt;
+fn = &lt;function TestCreateOrdersByMealTypeAgeCuisineTable.setUp.&lt;locals&gt;.&lt;lambda&gt; at 0x7f6e1c330f70&gt;
+
+    def assertImplemented(self, fn):
+        try:
+&gt;           return fn()
+
+test/common.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+&gt;   self.table = self.assertImplemented(lambda: get_table())
+
+test/test_create_tables.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_table() -&gt; pd.DataFrame:
+&gt;       return create_orders_by_meal_type_age_cuisine_table(get_reduced_db())
+
+test/common.py:142: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_reduced_db() -&gt; ReducedDatabase:
+&gt;       return reduce_dims(MultiDimDatabase(*load_all_tables()))
+
+test/common.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+
+    def load_all_tables(tables_dir_path: Path = TABLES_DIR_PATH) -&gt; List[pd.DataFrame]:
+&gt;       res = load_tables(tables_dir_path, list(TABLES_SCHEMA.keys()))
+
+test/common.py:133: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+tables = ['addresses', 'birthdates', 'cities', 'countries', 'cuisines', 'districts', ...]
+
+    def load_tables(tables_dir_path: Path, tables: List[str]) -&gt; List[pd.DataFrame]:
+&gt;       raise NotImplementedError()
+E       NotImplementedError
+
+app/dims_and_facts.py:52: NotImplementedError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable testMethod=test_table_should_have_correct_column_names&gt;
+
+    def setUp(self) -&gt; None:
+&gt;       self.table = self.assertImplemented(lambda: get_table())
+
+test/test_create_tables.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test/common.py:150: in assertImplemented
+    self.fail("This should be implemented")
+E   AssertionError: This should be implemented</failure></testcase><testcase classname="test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable" name="test_table_should_have_correct_column_types" file="test/test_create_tables.py" line="57" time="0.008"><failure message="AssertionError: This should be implemented">self = &lt;test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable testMethod=test_table_should_have_correct_column_types&gt;
+fn = &lt;function TestCreateOrdersByMealTypeAgeCuisineTable.setUp.&lt;locals&gt;.&lt;lambda&gt; at 0x7f6e1d15b940&gt;
+
+    def assertImplemented(self, fn):
+        try:
+&gt;           return fn()
+
+test/common.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+&gt;   self.table = self.assertImplemented(lambda: get_table())
+
+test/test_create_tables.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_table() -&gt; pd.DataFrame:
+&gt;       return create_orders_by_meal_type_age_cuisine_table(get_reduced_db())
+
+test/common.py:142: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_reduced_db() -&gt; ReducedDatabase:
+&gt;       return reduce_dims(MultiDimDatabase(*load_all_tables()))
+
+test/common.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+
+    def load_all_tables(tables_dir_path: Path = TABLES_DIR_PATH) -&gt; List[pd.DataFrame]:
+&gt;       res = load_tables(tables_dir_path, list(TABLES_SCHEMA.keys()))
+
+test/common.py:133: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+tables = ['addresses', 'birthdates', 'cities', 'countries', 'cuisines', 'districts', ...]
+
+    def load_tables(tables_dir_path: Path, tables: List[str]) -&gt; List[pd.DataFrame]:
+&gt;       raise NotImplementedError()
+E       NotImplementedError
+
+app/dims_and_facts.py:52: NotImplementedError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable testMethod=test_table_should_have_correct_column_types&gt;
+
+    def setUp(self) -&gt; None:
+&gt;       self.table = self.assertImplemented(lambda: get_table())
+
+test/test_create_tables.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test/common.py:150: in assertImplemented
+    self.fail("This should be implemented")
+E   AssertionError: This should be implemented</failure></testcase><testcase classname="test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable" name="test_table_should_have_correct_index" file="test/test_create_tables.py" line="46" time="0.005"><failure message="AssertionError: This should be implemented">self = &lt;test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable testMethod=test_table_should_have_correct_index&gt;
+fn = &lt;function TestCreateOrdersByMealTypeAgeCuisineTable.setUp.&lt;locals&gt;.&lt;lambda&gt; at 0x7f6e1c330e50&gt;
+
+    def assertImplemented(self, fn):
+        try:
+&gt;           return fn()
+
+test/common.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+&gt;   self.table = self.assertImplemented(lambda: get_table())
+
+test/test_create_tables.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_table() -&gt; pd.DataFrame:
+&gt;       return create_orders_by_meal_type_age_cuisine_table(get_reduced_db())
+
+test/common.py:142: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_reduced_db() -&gt; ReducedDatabase:
+&gt;       return reduce_dims(MultiDimDatabase(*load_all_tables()))
+
+test/common.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+
+    def load_all_tables(tables_dir_path: Path = TABLES_DIR_PATH) -&gt; List[pd.DataFrame]:
+&gt;       res = load_tables(tables_dir_path, list(TABLES_SCHEMA.keys()))
+
+test/common.py:133: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+tables = ['addresses', 'birthdates', 'cities', 'countries', 'cuisines', 'districts', ...]
+
+    def load_tables(tables_dir_path: Path, tables: List[str]) -&gt; List[pd.DataFrame]:
+&gt;       raise NotImplementedError()
+E       NotImplementedError
+
+app/dims_and_facts.py:52: NotImplementedError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable testMethod=test_table_should_have_correct_index&gt;
+
+    def setUp(self) -&gt; None:
+&gt;       self.table = self.assertImplemented(lambda: get_table())
+
+test/test_create_tables.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test/common.py:150: in assertImplemented
+    self.fail("This should be implemented")
+E   AssertionError: This should be implemented</failure></testcase><testcase classname="test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable" name="test_user_age_is_properly_mapped" file="test/test_create_tables.py" line="66" time="0.010"><failure message="AssertionError: This should be implemented">self = &lt;test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable testMethod=test_user_age_is_properly_mapped&gt;
+fn = &lt;function TestCreateOrdersByMealTypeAgeCuisineTable.setUp.&lt;locals&gt;.&lt;lambda&gt; at 0x7f6e1d15baf0&gt;
+
+    def assertImplemented(self, fn):
+        try:
+&gt;           return fn()
+
+test/common.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+&gt;   self.table = self.assertImplemented(lambda: get_table())
+
+test/test_create_tables.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_table() -&gt; pd.DataFrame:
+&gt;       return create_orders_by_meal_type_age_cuisine_table(get_reduced_db())
+
+test/common.py:142: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_reduced_db() -&gt; ReducedDatabase:
+&gt;       return reduce_dims(MultiDimDatabase(*load_all_tables()))
+
+test/common.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+
+    def load_all_tables(tables_dir_path: Path = TABLES_DIR_PATH) -&gt; List[pd.DataFrame]:
+&gt;       res = load_tables(tables_dir_path, list(TABLES_SCHEMA.keys()))
+
+test/common.py:133: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+tables = ['addresses', 'birthdates', 'cities', 'countries', 'cuisines', 'districts', ...]
+
+    def load_tables(tables_dir_path: Path, tables: List[str]) -&gt; List[pd.DataFrame]:
+&gt;       raise NotImplementedError()
+E       NotImplementedError
+
+app/dims_and_facts.py:52: NotImplementedError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test.test_create_tables.TestCreateOrdersByMealTypeAgeCuisineTable testMethod=test_user_age_is_properly_mapped&gt;
+
+    def setUp(self) -&gt; None:
+&gt;       self.table = self.assertImplemented(lambda: get_table())
+
+test/test_create_tables.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test/common.py:150: in assertImplemented
+    self.fail("This should be implemented")
+E   AssertionError: This should be implemented</failure></testcase><testcase classname="test.test_load_tables.TestLoadTables" name="test_no_tables_when_no_filepaths_given" file="test/test_load_tables.py" line="15" time="0.010"><failure message="AssertionError: This should be implemented">self = &lt;test.test_load_tables.TestLoadTables testMethod=test_no_tables_when_no_filepaths_given&gt;
+fn = &lt;function TestLoadTables.test_no_tables_when_no_filepaths_given.&lt;locals&gt;.&lt;lambda&gt; at 0x7f6e1d2618b0&gt;
+
+    def assertImplemented(self, fn):
+        try:
+&gt;           return fn()
+
+test/common.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+&gt;   res = self.assertImplemented(lambda: load_tables(TABLES_DIR_PATH, []))
+
+test/test_load_tables.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables'), tables = []
+
+    def load_tables(tables_dir_path: Path, tables: List[str]) -&gt; List[pd.DataFrame]:
+&gt;       raise NotImplementedError()
+E       NotImplementedError
+
+app/dims_and_facts.py:52: NotImplementedError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test.test_load_tables.TestLoadTables testMethod=test_no_tables_when_no_filepaths_given&gt;
+
+    def test_no_tables_when_no_filepaths_given(self):
+&gt;       res = self.assertImplemented(lambda: load_tables(TABLES_DIR_PATH, []))
+
+test/test_load_tables.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test/common.py:150: in assertImplemented
+    self.fail("This should be implemented")
+E   AssertionError: This should be implemented</failure></testcase><testcase classname="test.test_load_tables.TestLoadTables" name="test_tables_are_dataframes" file="test/test_load_tables.py" line="25" time="0.002"><failure message="AssertionError: This should be implemented">self = &lt;test.test_load_tables.TestLoadTables testMethod=test_tables_are_dataframes&gt;
+fn = &lt;function TestLoadTables.test_tables_are_dataframes.&lt;locals&gt;.&lt;lambda&gt; at 0x7f6e1d15b790&gt;
+
+    def assertImplemented(self, fn):
+        try:
+&gt;           return fn()
+
+test/common.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+&gt;   res = self.assertImplemented(lambda: load_all_tables())
+
+test/test_load_tables.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+
+    def load_all_tables(tables_dir_path: Path = TABLES_DIR_PATH) -&gt; List[pd.DataFrame]:
+&gt;       res = load_tables(tables_dir_path, list(TABLES_SCHEMA.keys()))
+
+test/common.py:133: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+tables = ['addresses', 'birthdates', 'cities', 'countries', 'cuisines', 'districts', ...]
+
+    def load_tables(tables_dir_path: Path, tables: List[str]) -&gt; List[pd.DataFrame]:
+&gt;       raise NotImplementedError()
+E       NotImplementedError
+
+app/dims_and_facts.py:52: NotImplementedError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test.test_load_tables.TestLoadTables testMethod=test_tables_are_dataframes&gt;
+
+    def test_tables_are_dataframes(self):
+&gt;       res = self.assertImplemented(lambda: load_all_tables())
+
+test/test_load_tables.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test/common.py:150: in assertImplemented
+    self.fail("This should be implemented")
+E   AssertionError: This should be implemented</failure></testcase><testcase classname="test.test_load_tables.TestLoadTables" name="test_tables_count_equal_given_filepaths_count" file="test/test_load_tables.py" line="19" time="0.002"><failure message="AssertionError: This should be implemented">self = &lt;test.test_load_tables.TestLoadTables testMethod=test_tables_count_equal_given_filepaths_count&gt;
+fn = &lt;function TestLoadTables.test_tables_count_equal_given_filepaths_count.&lt;locals&gt;.&lt;lambda&gt; at 0x7f6e1d185280&gt;
+
+    def assertImplemented(self, fn):
+        try:
+&gt;           return fn()
+
+test/common.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+&gt;       lambda: load_tables(TABLES_DIR_PATH, list(TABLES_SCHEMA.keys())[:5])
+    )
+
+test/test_load_tables.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+tables = ['addresses', 'birthdates', 'cities', 'countries', 'cuisines']
+
+    def load_tables(tables_dir_path: Path, tables: List[str]) -&gt; List[pd.DataFrame]:
+&gt;       raise NotImplementedError()
+E       NotImplementedError
+
+app/dims_and_facts.py:52: NotImplementedError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test.test_load_tables.TestLoadTables testMethod=test_tables_count_equal_given_filepaths_count&gt;
+
+    def test_tables_count_equal_given_filepaths_count(self):
+&gt;       res = self.assertImplemented(
+            lambda: load_tables(TABLES_DIR_PATH, list(TABLES_SCHEMA.keys())[:5])
+        )
+
+test/test_load_tables.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test/common.py:150: in assertImplemented
+    self.fail("This should be implemented")
+E   AssertionError: This should be implemented</failure></testcase><testcase classname="test.test_load_tables.TestLoadTables" name="test_tables_have_correct_headers" file="test/test_load_tables.py" line="35" time="0.001"><failure message="AssertionError: This should be implemented">self = &lt;test.test_load_tables.TestLoadTables testMethod=test_tables_have_correct_headers&gt;
+fn = &lt;function TestLoadTables.test_tables_have_correct_headers.&lt;locals&gt;.&lt;lambda&gt; at 0x7f6e1d1855e0&gt;
+
+    def assertImplemented(self, fn):
+        try:
+&gt;           return fn()
+
+test/common.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+&gt;   df = self.assertImplemented(lambda: load_single_table(table))
+
+test/test_load_tables.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'addresses'
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+
+    def load_single_table(
+        name: str, tables_dir_path: Path = TABLES_DIR_PATH
+    ) -&gt; pd.DataFrame:
+&gt;       res = load_tables(tables_dir_path, [name])
+
+test/common.py:128: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+tables = ['addresses']
+
+    def load_tables(tables_dir_path: Path, tables: List[str]) -&gt; List[pd.DataFrame]:
+&gt;       raise NotImplementedError()
+E       NotImplementedError
+
+app/dims_and_facts.py:52: NotImplementedError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test.test_load_tables.TestLoadTables testMethod=test_tables_have_correct_headers&gt;
+
+    def test_tables_have_correct_headers(self):
+        for table, info in TABLES_SCHEMA.items():
+&gt;           df = self.assertImplemented(lambda: load_single_table(table))
+
+test/test_load_tables.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test/common.py:150: in assertImplemented
+    self.fail("This should be implemented")
+E   AssertionError: This should be implemented</failure></testcase><testcase classname="test.test_load_tables.TestLoadTables" name="test_tables_have_correct_indices" file="test/test_load_tables.py" line="30" time="0.001"><failure message="AssertionError: This should be implemented">self = &lt;test.test_load_tables.TestLoadTables testMethod=test_tables_have_correct_indices&gt;
+fn = &lt;function TestLoadTables.test_tables_have_correct_indices.&lt;locals&gt;.&lt;lambda&gt; at 0x7f6e1d15b790&gt;
+
+    def assertImplemented(self, fn):
+        try:
+&gt;           return fn()
+
+test/common.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+&gt;   df = self.assertImplemented(lambda: load_single_table(table))
+
+test/test_load_tables.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'addresses'
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+
+    def load_single_table(
+        name: str, tables_dir_path: Path = TABLES_DIR_PATH
+    ) -&gt; pd.DataFrame:
+&gt;       res = load_tables(tables_dir_path, [name])
+
+test/common.py:128: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+tables = ['addresses']
+
+    def load_tables(tables_dir_path: Path, tables: List[str]) -&gt; List[pd.DataFrame]:
+&gt;       raise NotImplementedError()
+E       NotImplementedError
+
+app/dims_and_facts.py:52: NotImplementedError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test.test_load_tables.TestLoadTables testMethod=test_tables_have_correct_indices&gt;
+
+    def test_tables_have_correct_indices(self):
+        for table, info in TABLES_SCHEMA.items():
+&gt;           df = self.assertImplemented(lambda: load_single_table(table))
+
+test/test_load_tables.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test/common.py:150: in assertImplemented
+    self.fail("This should be implemented")
+E   AssertionError: This should be implemented</failure></testcase><testcase classname="test.test_load_tables.TestLoadTables" name="test_tables_have_records" file="test/test_load_tables.py" line="40" time="0.002"><failure message="AssertionError: This should be implemented">self = &lt;test.test_load_tables.TestLoadTables testMethod=test_tables_have_records&gt;
+fn = &lt;function TestLoadTables.test_tables_have_records.&lt;locals&gt;.&lt;lambda&gt; at 0x7f6e1d185ca0&gt;
+
+    def assertImplemented(self, fn):
+        try:
+&gt;           return fn()
+
+test/common.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+&gt;   df = self.assertImplemented(lambda: load_single_table(table))
+
+test/test_load_tables.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'addresses'
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+
+    def load_single_table(
+        name: str, tables_dir_path: Path = TABLES_DIR_PATH
+    ) -&gt; pd.DataFrame:
+&gt;       res = load_tables(tables_dir_path, [name])
+
+test/common.py:128: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+tables = ['addresses']
+
+    def load_tables(tables_dir_path: Path, tables: List[str]) -&gt; List[pd.DataFrame]:
+&gt;       raise NotImplementedError()
+E       NotImplementedError
+
+app/dims_and_facts.py:52: NotImplementedError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test.test_load_tables.TestLoadTables testMethod=test_tables_have_records&gt;
+
+    def test_tables_have_records(self):
+        for table, info in TABLES_SCHEMA.items():
+&gt;           df = self.assertImplemented(lambda: load_single_table(table))
+
+test/test_load_tables.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test/common.py:150: in assertImplemented
+    self.fail("This should be implemented")
+E   AssertionError: This should be implemented</failure></testcase><testcase classname="test.test_reduce_dims.TestReduceDims" name="test_no_none_tables" file="test/test_reduce_dims.py" line="14" time="0.002"><failure message="AssertionError: This should be implemented">self = &lt;test.test_reduce_dims.TestReduceDims testMethod=test_no_none_tables&gt;
+fn = &lt;function TestReduceDims.test_no_none_tables.&lt;locals&gt;.&lt;lambda&gt; at 0x7f6e1d185c10&gt;
+
+    def assertImplemented(self, fn):
+        try:
+&gt;           return fn()
+
+test/common.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+&gt;   reduced_db = self.assertImplemented(lambda: get_reduced_db())
+
+test/test_reduce_dims.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_reduced_db() -&gt; ReducedDatabase:
+&gt;       return reduce_dims(MultiDimDatabase(*load_all_tables()))
+
+test/common.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+
+    def load_all_tables(tables_dir_path: Path = TABLES_DIR_PATH) -&gt; List[pd.DataFrame]:
+&gt;       res = load_tables(tables_dir_path, list(TABLES_SCHEMA.keys()))
+
+test/common.py:133: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+tables = ['addresses', 'birthdates', 'cities', 'countries', 'cuisines', 'districts', ...]
+
+    def load_tables(tables_dir_path: Path, tables: List[str]) -&gt; List[pd.DataFrame]:
+&gt;       raise NotImplementedError()
+E       NotImplementedError
+
+app/dims_and_facts.py:52: NotImplementedError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test.test_reduce_dims.TestReduceDims testMethod=test_no_none_tables&gt;
+
+    def test_no_none_tables(self):
+&gt;       reduced_db = self.assertImplemented(lambda: get_reduced_db())
+
+test/test_reduce_dims.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test/common.py:150: in assertImplemented
+    self.fail("This should be implemented")
+E   AssertionError: This should be implemented</failure></testcase><testcase classname="test.test_reduce_dims.TestReduceDims" name="test_reduced_tables_have_correct_column_names" file="test/test_reduce_dims.py" line="29" time="0.001"><failure message="AssertionError: This should be implemented">self = &lt;test.test_reduce_dims.TestReduceDims testMethod=test_reduced_tables_have_correct_column_names&gt;
+fn = &lt;function TestReduceDims.test_reduced_tables_have_correct_column_names.&lt;locals&gt;.&lt;lambda&gt; at 0x7f6e1d185940&gt;
+
+    def assertImplemented(self, fn):
+        try:
+&gt;           return fn()
+
+test/common.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+&gt;   reduced_db = self.assertImplemented(lambda: get_reduced_db())
+
+test/test_reduce_dims.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_reduced_db() -&gt; ReducedDatabase:
+&gt;       return reduce_dims(MultiDimDatabase(*load_all_tables()))
+
+test/common.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+
+    def load_all_tables(tables_dir_path: Path = TABLES_DIR_PATH) -&gt; List[pd.DataFrame]:
+&gt;       res = load_tables(tables_dir_path, list(TABLES_SCHEMA.keys()))
+
+test/common.py:133: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+tables = ['addresses', 'birthdates', 'cities', 'countries', 'cuisines', 'districts', ...]
+
+    def load_tables(tables_dir_path: Path, tables: List[str]) -&gt; List[pd.DataFrame]:
+&gt;       raise NotImplementedError()
+E       NotImplementedError
+
+app/dims_and_facts.py:52: NotImplementedError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test.test_reduce_dims.TestReduceDims testMethod=test_reduced_tables_have_correct_column_names&gt;
+
+    def test_reduced_tables_have_correct_column_names(self):
+&gt;       reduced_db = self.assertImplemented(lambda: get_reduced_db())
+
+test/test_reduce_dims.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test/common.py:150: in assertImplemented
+    self.fail("This should be implemented")
+E   AssertionError: This should be implemented</failure></testcase><testcase classname="test.test_reduce_dims.TestReduceDims" name="test_reduced_tables_have_correct_column_types" file="test/test_reduce_dims.py" line="38" time="0.002"><failure message="AssertionError: This should be implemented">self = &lt;test.test_reduce_dims.TestReduceDims testMethod=test_reduced_tables_have_correct_column_types&gt;
+fn = &lt;function TestReduceDims.test_reduced_tables_have_correct_column_types.&lt;locals&gt;.&lt;lambda&gt; at 0x7f6e1d185dc0&gt;
+
+    def assertImplemented(self, fn):
+        try:
+&gt;           return fn()
+
+test/common.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+&gt;   reduced_db = self.assertImplemented(lambda: get_reduced_db())
+
+test/test_reduce_dims.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_reduced_db() -&gt; ReducedDatabase:
+&gt;       return reduce_dims(MultiDimDatabase(*load_all_tables()))
+
+test/common.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+
+    def load_all_tables(tables_dir_path: Path = TABLES_DIR_PATH) -&gt; List[pd.DataFrame]:
+&gt;       res = load_tables(tables_dir_path, list(TABLES_SCHEMA.keys()))
+
+test/common.py:133: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+tables = ['addresses', 'birthdates', 'cities', 'countries', 'cuisines', 'districts', ...]
+
+    def load_tables(tables_dir_path: Path, tables: List[str]) -&gt; List[pd.DataFrame]:
+&gt;       raise NotImplementedError()
+E       NotImplementedError
+
+app/dims_and_facts.py:52: NotImplementedError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test.test_reduce_dims.TestReduceDims testMethod=test_reduced_tables_have_correct_column_types&gt;
+
+    def test_reduced_tables_have_correct_column_types(self):
+&gt;       reduced_db = self.assertImplemented(lambda: get_reduced_db())
+
+test/test_reduce_dims.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test/common.py:150: in assertImplemented
+    self.fail("This should be implemented")
+E   AssertionError: This should be implemented</failure></testcase><testcase classname="test.test_reduce_dims.TestReduceDims" name="test_reduced_tables_have_correct_indices" file="test/test_reduce_dims.py" line="23" time="0.010"><failure message="AssertionError: This should be implemented">self = &lt;test.test_reduce_dims.TestReduceDims testMethod=test_reduced_tables_have_correct_indices&gt;
+fn = &lt;function TestReduceDims.test_reduced_tables_have_correct_indices.&lt;locals&gt;.&lt;lambda&gt; at 0x7f6e1cb6f310&gt;
+
+    def assertImplemented(self, fn):
+        try:
+&gt;           return fn()
+
+test/common.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+&gt;   reduced_db = self.assertImplemented(lambda: get_reduced_db())
+
+test/test_reduce_dims.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_reduced_db() -&gt; ReducedDatabase:
+&gt;       return reduce_dims(MultiDimDatabase(*load_all_tables()))
+
+test/common.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+
+    def load_all_tables(tables_dir_path: Path = TABLES_DIR_PATH) -&gt; List[pd.DataFrame]:
+&gt;       res = load_tables(tables_dir_path, list(TABLES_SCHEMA.keys()))
+
+test/common.py:133: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+tables_dir_path = PosixPath('/home/devskiller/task/app/tables')
+tables = ['addresses', 'birthdates', 'cities', 'countries', 'cuisines', 'districts', ...]
+
+    def load_tables(tables_dir_path: Path, tables: List[str]) -&gt; List[pd.DataFrame]:
+&gt;       raise NotImplementedError()
+E       NotImplementedError
+
+app/dims_and_facts.py:52: NotImplementedError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test.test_reduce_dims.TestReduceDims testMethod=test_reduced_tables_have_correct_indices&gt;
+
+    def test_reduced_tables_have_correct_indices(self):
+&gt;       reduced_db = self.assertImplemented(lambda: get_reduced_db())
+
+test/test_reduce_dims.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test/common.py:150: in assertImplemented
+    self.fail("This should be implemented")
+E   AssertionError: This should be implemented</failure></testcase><testcase classname="test.test_structure.StructureTestSuite" name="test_function_exists_create_orders_by_meal_type_age_cuisine_table" file="test/test_structure.py" line="11" time="0.007" /><testcase classname="test.test_structure.StructureTestSuite" name="test_function_exists_load_tables" file="test/test_structure.py" line="54" time="0.001" /><testcase classname="test.test_structure.StructureTestSuite" name="test_function_exists_reduce_dims" file="test/test_structure.py" line="109" time="0.005" /><testcase classname="test.test_structure.StructureTestSuite" name="test_function_signature_match_create_orders_by_meal_type_age_cuisine_table" file="test/test_structure.py" line="21" time="0.008" /><testcase classname="test.test_structure.StructureTestSuite" name="test_function_signature_match_load_tables" file="test/test_structure.py" line="64" time="0.001" /><testcase classname="test.test_structure.StructureTestSuite" name="test_function_signature_match_reduce_dims" file="test/test_structure.py" line="119" time="0.002" /></testsuite></testsuites>
